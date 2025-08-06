@@ -33,14 +33,14 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 pt-safe pb-2 ${
         isScrolled
           ? "bg-black/95 backdrop-blur-md shadow-lg"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 lg:h-20">
+        <div className="flex justify-between items-center h-14 lg:h-20">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -48,10 +48,10 @@ const Header = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex items-center space-x-2"
           >
-            <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-2 rounded-lg">
-              <Dumbbell className="h-6 w-6 text-white" />
+            <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-1.5 lg:p-2 rounded-lg">
+              <Dumbbell className="h-5 w-5 lg:h-6 lg:w-6 text-white" />
             </div>
-            <span className="text-xl lg:text-2xl font-bold text-white">
+            <span className="text-lg lg:text-2xl font-bold text-white">
               Iron<span className="text-orange-500">Fit</span>
             </span>
           </motion.div>
@@ -90,11 +90,11 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden text-white p-2"
+            className="lg:hidden text-white p-2 -mr-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </div>
@@ -109,7 +109,7 @@ const Header = () => {
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-black/95 backdrop-blur-md border-t border-gray-800"
           >
-            <div className="px-4 py-6 space-y-4">
+            <div className="px-4 py-4 space-y-3">
               {navItems.map((item, index) => (
                 <motion.div
                   key={item.name}
@@ -130,7 +130,7 @@ const Header = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: navItems.length * 0.1 }}
-                className="pt-4"
+                className="pt-3"
               >
                 <Button variant="gym" size="lg" className="w-full">
                   Join Now

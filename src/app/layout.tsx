@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description: "Join IronFit, the premier fitness destination with state-of-the-art equipment, expert trainers, and a supportive community.",
     images: ["https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"],
   },
-  viewport: "width=device-width, initial-scale=1",
+  viewport: "width=device-width, initial-scale=1, viewport-fit=cover",
   robots: "index, follow",
 };
 
